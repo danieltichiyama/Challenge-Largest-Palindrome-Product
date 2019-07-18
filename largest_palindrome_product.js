@@ -12,13 +12,29 @@ module.exports = function(digits) {
 
   // do your work here
   function isPalindrome(num) {
-    stringyNum = num.toString();
-    arrayNum = stringyNum.split();
-    reverseArr = arrayNum.reverse();
-    reverseStringyNum = reverseArr.join("");
+    let stringyNum = num.toString();
+    let arrayNum = stringyNum.split("");
+    let reverseArr = arrayNum.reverse();
+    let reverseStringyNum = reverseArr.join("");
 
     if (stringyNum === reverseStringyNum) {
-      palindromeNumber = num;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let start = Math.pow(10, digits) - 1;
+  console.log(start);
+
+  for (let i = start; i > 0; i--) {
+    for (let j = start; j > 0; j--) {
+      let number = i * j;
+      if (isPalindrome(number) && palindromeNumber < number) {
+        factor_0 = i;
+        factor_1 = j;
+        palindromeNumber = number;
+      }
     }
   }
 
