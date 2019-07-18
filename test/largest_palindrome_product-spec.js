@@ -20,6 +20,8 @@ describe("Find The Largest Palindrome Product", function() {
 
     // add your tests here
     //
+    expect([993, 913]).to.include(product.factor_0);
+    expect([993, 913]).to.include(product.factor_1);
     //
   });
 });

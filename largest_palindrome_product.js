@@ -25,7 +25,6 @@ module.exports = function(digits) {
   }
 
   let start = Math.pow(10, digits) - 1;
-  console.log(start);
 
   for (let i = start; i > 0; i--) {
     for (let j = start; j > 0; j--) {
